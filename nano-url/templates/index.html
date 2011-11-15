@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="description" content="Your description goes here" />
+	<meta name="keywords" content="your,keywords,goes,here" />
+	<meta name="author" content="Your Name" />
+	<link rel="stylesheet" type="text/css" href="/static/variant-pure.css" />
+	<title>URL Shortner</title>
+</head>
+
+<body id="reversed">
+<div id="container">
+	<div id="main">
+		<div id="title">
+			<h1><a href="index.html" accesskey="4">Simple URL</a></h1>
+			<h2>Shorten your URL</h2>
+		</div>
+
+		<div id="introtext">
+		<p><em>"This is Simple URL, a free website to shorten your complex urls into short and flexible."</em></p>
+		</div>
+		
+		<div class="post">
+		<form action="{%url views.detail%}" method="post">
+		
+		<h2>Give your URL here</h2>
+		<input type="text" name="url" size="50px"/>
+		<input type="submit" name="get_url" value="Submit" />
+		<input type="reset" name="clear" />
+		</div>
+		
+		<div class="post">
+		{% if show_url %}
+		<h2>Your new URL</h2>
+		<a href=" {{ appended_url }} ">{{ appended_url}} <a/>
+	
+	
+		{% endif %}
+			
+		</div>
+	</div>
+
+	<div id="sidebar">
+		<ul class="avmenu">
+			<li><a>About</a></li>
+		</ul>
+		<p>URL shortners helps you to shorten your lengthy URL's to simple URL's. These short versions redirect to your original link and it can be used anywhere.</p>
+
+		<p class="block"><strong>Note: </strong>You have to insert complete URL address.(eg: 'http://www.someurl.com'). The length of URL is limited to 500 characters.</p>
+	</div>
+	
+	<div id="footer">
+		<p>Created by <a href="#">Jinesh</a>. Contact:jineshpaloor@gmail.com</p>
+	</div>
+</div>
+</body>
+</html>

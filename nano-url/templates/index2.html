@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+
+
+	
+	<title>url shortener</title>
+  	
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+  	<link type="text/css" rel="stylesheet" href="/static/styles.css" />
+        
+</head>
+<body>
+<div id="container">
+<div id="header"><h1>NANO url</h1>
+<p align="right"><font size=3 >A simple URL shortening application</font></p>
+</div>
+  <div id="wrapper">
+    <div id="content">
+      
+	
+		<form name="graph" >							
+			<div>
+				<div>
+					
+				</div>
+
+				
+			</div>
+		</form>
+		<div align="center">
+			
+			<form action="{%url views.detail%}" method="post">
+			
+			<textarea cols="60" rows="6" name="url"></textarea>
+
+			<table>
+			<td><input style="color: #ccccccc" type="submit" name="get_url" value="       Shorten       " /></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" value="       Reset       " /></td>
+			</table><br><br>
+			<table id="fade">
+			
+			{% if show_url %}
+			<td><h3>Your nano URL :  </h3></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" size=30 STYLE="background-color: #cccccc;" value="{{ appended_url}}" />
+			
+			
+			{% endif %}
+
+			</table><br><br>
+			<font size=2><b>Note:</b> You have to insert complete URL address.(eg: <b>'http://www.someurl.com'</b>)</font><br><br>
+		</div>
+
+		
+      
+    </div>
+  
+  <div id="footer"><br><br><center>
+    <font size=2>Created by : <b>Sreehari k marar     </b> Contact : <b>sreeharikmarar@gmail.com </b></font><br><br>
+  </div>
+</div>
+</body>
+</html>
